@@ -47,12 +47,13 @@ $(function () {
 			var _title = list[i].title;
 			var _priceShow = list[i].priceShow;
 			var _priceSave = list[i].priceSave;
+			var _day = list[i].day;
 			str += '<li  goodId="' + _id + '" class="payBtn '+ _isHot + '">';
 			str += '<div class="main">';
 			str += '<span class="days">' + _title + '</span><span class="price">￥' + _price  +'</span>';
 			str += '</div>';
 			str += '<div class="info">';
-			str += '<span >会员时长:'+_priceShow/60+'个月'+'('+_priceShow/2+'天)'+'</span>'
+			str += '<span >会员时长:&nbsp'+'(&nbsp'+_day+'天&nbsp)'+'</span>'
 			str += '<span class="average">￥' + ((_priceDay + '').substring(0, 8)) + '/天</span>';
 			str += '</div>';
 			str += '</li>';
@@ -124,12 +125,13 @@ $(function () {
 			var _title = list[i].title;
 			var _priceShow = list[i].priceShow;
 			var _priceSave = list[i].priceSave;
+			var _day = list[i].day;
 			str += '<li  goodId="' + _id + '" class="payBtn '+ _isHot + '">';
 			str += '<div class="main">';
 			str += '<span class="days">' + _title + '</span><span class="price">￥' + _price +'</span>';
 			str += '</div>';
 			str += '<div class="info">';
-			str += '<span >会员时长:'+_priceShow/90+'个月'+'('+_priceShow/3+'天)'+'</span>'
+			str += '<span >会员时长:&nbsp'+'(&nbsp'+_day+'天&nbsp)'+'</span>'
 			str += '<span class="average">￥' + ((_priceDay + '').substring(0, 8)) + '/天</span>';
 			str += '</div>';
 			str += '</li>';
@@ -247,7 +249,7 @@ $(function () {
 	function isHide(flag) {
 		if (flag == false) {
 			$(".product").attr("style", "margin-top:0px")
-			// $(".buylist .wechat").attr("style","display:none")
+			$(".buylist .wechat").attr("style","display:none")
 			$("input").focus(function () {
 				var wHeight = window.innerHeight;   //获取初始可视窗口高度  
 				window.addEventListener('resize', function () {       //监测窗口大小的变化事件  
