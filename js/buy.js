@@ -128,7 +128,7 @@ $(function () {
 			var _day = list[i].day;
 			str += '<li  goodId="' + _id + '" class="payBtn '+ _isHot + '">';
 			str += '<div class="main">';
-			str += '<span class="days">' + _title + '</span><span class="price">￥' + _price +'</span>';
+			str += '<span class="days">' + _title + '</span><span class="price">￥' + _price +'.00'+'</span>';
 			str += '</div>';
 			str += '<div class="info">';
 			str += '<span >会员时长:&nbsp'+'(&nbsp'+_day+'天&nbsp)'+'</span>'

@@ -136,25 +136,25 @@ input:focus{outline:0}
 .coupon .showGoods{display: block}
 
 .package-exchange {
-    padding: 1.3rem 2.8rem;
-    font-size: 1rem;
+    padding: .8rem 1.86rem;
+    font-size: .9rem;
 }
 .package-exchange-input {
     display: flex;
     border: 1px solid #b7bff7;
-    margin-top: 1.2rem;
+    margin-top: .66rem;
 }
 .package-exchange-input input {
     border: none;
     width: 100%;
-    font-size: 0.9rem;
-    padding: .5rem;
+    font-size: .42rem;
+    padding: .6rem;
 }
 .package-exchange-input button {
     flex-shrink: 0;
-    font-size: .45rem;
+    font-size: .9rem;
     border: none;
     background-color: #0a80ff;
     color: #fff;
-    padding: 0 .6rem;
+    padding: 0 1.2rem;
 }
