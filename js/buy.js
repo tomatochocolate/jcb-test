@@ -43,19 +43,30 @@ $(function () {
 			if( list[i].isHot == true){
 				var _isHot = 'hot';
 			}
-			
+			if(_id == 133){
+				break
+				
+			}
 			var _title = list[i].title;
 			var _priceShow = list[i].priceShow;
 			var _priceSave = list[i].priceSave;
 			var _day = list[i].day;
 			str += '<li  goodId="' + _id + '" class="payBtn '+ _isHot + '">';
-			str += '<div class="main">';
-			str += '<span class="days">' + _title + '</span><span class="price">￥' + _price  +'</span>';
-			str += '</div>';
-			str += '<div class="info">';
-			str += '<span >会员时长:&nbsp'+'(&nbsp'+_day+'天&nbsp)'+'</span>'
-			str += '<span class="average">￥' + ((_priceDay + '').substring(0, 8)) + '/天</span>';
-			str += '</div>';
+			// str += '<div class="main">';
+			// str += '<span class="days">' + _title + '</span><span class="price">￥' + _price  +'</span>';
+			// str += '</div>';
+			// str += '<div class="info">';
+			// str += '<span >会员时长:&nbsp'+'(&nbsp'+_day+'天&nbsp)'+'</span>'
+			// str += '<span class="average">￥' + ((_priceDay + '').substring(0, 8)) + '/天</span>';
+			// str += '</div>';
+
+			str += '<div class="row">';
+			str += '<div class="col">' + _title + '</div>'+'<div class="col">￥' + _price.toFixed(2)   + '</div>'
+			str += '</div>'
+			str += '<div class="row">';
+			str += '<div class="col" >会员时长:&nbsp'+'(&nbsp'+_day+'天&nbsp)'+'</div>'+'<div class="col">￥' + ((_priceDay + '').substring(0, 8)) + '/天</div>';
+			str += '</div>'
+
 			str += '</li>';
 		}
 		// str += '<li><div class="main"><div class="card">卡序列号兑换:<span class="buy"><a href="card.html" goodid="104" class="tocard"><span>兑换</span></a></span></div></div><div class="info"></div></li>'
@@ -109,7 +120,7 @@ $(function () {
 	// 	});
 	// }
 	function highGoodsList(list) {
-		console.log(list);
+		// console.log(list);
 		
 		var str = '';
 		for (var i = 0; i < list.length; i++) {
@@ -127,18 +138,17 @@ $(function () {
 			var _priceSave = list[i].priceSave;
 			var _day = list[i].day;
 			str += '<li  goodId="' + _id + '" class="payBtn '+ _isHot + '">';
-			str += '<div class="main">';
-			str += '<span class="days">' + _title + '</span><span class="price">￥' + _price +'.00'+'</span>';
-			str += '</div>';
-			str += '<div class="info">';
-			str += '<span >会员时长:&nbsp'+'(&nbsp'+_day+'天&nbsp)'+'</span>'
-			str += '<span class="average">￥' + ((_priceDay + '').substring(0, 8)) + '/天</span>';
-			str += '</div>';
+			str += '<div class="row">';
+			str += '<div class="col">' + _title + '</div>'+'<div class="col">￥' + _price.toFixed(2)  + '</div>'
+			str += '</div>'
+			str += '<div class="row">';
+			str += '<div class="col" >会员时长:&nbsp'+'(&nbsp'+_day+'天&nbsp)'+'</div>'+'<div class="col">￥' + ((_priceDay + '').substring(0, 8)) + '/天</div>';
+			str += '</div>'
 			str += '</li>';
 		}
 		// str += '<li><div class="main"><div class="card">卡序列号兑换:<span class="buy"><a href="card.html" goodid="104" class="tocard"><span>兑换</span></a></span></div></div><div class="info"></div></li>'
 		$('.highGoods').html(str);
-		console.log(str);
+		// console.log(str);
 		
 		$(".product .payBtn").click(function () {
 			selectGoodId = $(this).attr('goodId');//设置当前选择的产品套餐
@@ -167,7 +177,7 @@ $(function () {
 	});
 	function goPay(payChannel) {
 		//showMessage('selectGoodId='+selectGoodId+'\npayChannel='+payChannel+'\ntoken='+token);
-		$('#payload').show();
+		// $('#payload').show();
 		$.ajax({
 			url: (apiUrl + '/api/qt/pay/wechartpay'),
 			cache: false,
@@ -239,6 +249,7 @@ $(function () {
 			success: function (data) {
 				showMessage(data, "error")
 				// window.console.log("$appcmdex_vpn:vpnmessageupdate");
+
 			},
 			complete: function () {//无论成功还是失败，都会调用此函数
 			}

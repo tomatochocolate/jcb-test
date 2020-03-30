@@ -45,7 +45,7 @@ input:focus{outline:0}
 
 .product{ margin: 0 auto;max-width: 750px}
 .product ul{width: 92%;margin: 0 auto;padding: 12px 0;  margin-top: -3rem;}
-.product ul li{margin-top: 10px; box-shadow: 7px 12.124px 24px 0px rgba(27, 98, 121, 0.1), 0px 14px 24px 0px rgba(27, 98, 121, 0.1);border-radius: 10px; background: #fff;padding: .53rem;} 
+.product ul li{margin-bottom: .95rem;margin-top: 10px; box-shadow: 7px 12.124px 24px 0px rgba(27, 98, 121, 0.1), 0px 14px 24px 0px rgba(27, 98, 121, 0.1);border-radius: 10px; background: #fff;padding: 1.2rem;} 
 .product ul li .main{height: 45px;line-height: 45px;padding: 2px 25px;}
 .product ul li .main .days{display: inline-block; font-size: 20px;line-height: 32px;color:#000}
 .product ul .hot{background: url(../image/hot.png);background-repeat: no-repeat}
@@ -105,7 +105,7 @@ input:focus{outline:0}
 #con .tocard i {display: inline-block;height: 20px;width: 20px;margin-right:8px;}
 #con .tocard i img{width: 20px;height: 20px;}
 #con .tocard span {display: inline-block;color: rgb(255, 255, 255);font-size: 14px;line-height: 20px}
-.lxqq{text-align: center;color: #0078FF}
+.lxqq{text-align: center;color: #0078FF;padding: 1.2rem;}
 
 #pay{width: 990px;margin: 0 auto;}
 .pay{width: 400px; margin: 0 auto;background: rgb(53, 165, 91);padding-bottom: 70px;float: left;}
@@ -123,8 +123,8 @@ input:focus{outline:0}
 
 .coupon{background-repeat: no-repeat}
 .couponTab{display: flex;background: url(../image/coupon-blue.png) no-repeat center / cover;padding: 0 0 3.5rem;display: flex;}
-.couponTab .tabA{width: 50%;text-align: center;font-size: 1.2rem;color: #fff;padding-top: 1.3rem;padding-bottom: 1.1rem;border-bottom: 1px solid #96b7fc;opacity: .8;}
-.couponTab .tabB{width: 50%;text-align: center;font-size: 1.2rem;color: #fff;padding-top: 1.3rem;padding-bottom: 1.1rem;border-bottom: 1px solid #96b7fc;opacity: .8;}
+.couponTab .tabA{width: 50%;text-align: center;font-size: 1.05rem;color: #fff;padding-top: 1.3rem;padding-bottom: 1.1rem;border-bottom: 1px solid #96b7fc;opacity: .8;}
+.couponTab .tabB{width: 50%;text-align: center;font-size: 1.05rem;color: #fff;padding-top: 1.3rem;padding-bottom: 1.1rem;border-bottom: 1px solid #96b7fc;opacity: .8;}
 
 .coupon .couponTab .tabActive{border-bottom: 3px solid;margin-bottom: -1px;opacity: 1;cursor: pointer;}
 .product .help ul li{box-shadow:0px}
@@ -137,24 +137,43 @@ input:focus{outline:0}
 
 .package-exchange {
     padding: .8rem 1.86rem;
-    font-size: .9rem;
+    font-size: 1rem;
 }
 .package-exchange-input {
     display: flex;
     border: 1px solid #b7bff7;
-    margin-top: .66rem;
+    margin-top: .77rem;
 }
 .package-exchange-input input {
     border: none;
     width: 100%;
-    font-size: .42rem;
-    padding: .6rem;
+    font-size: .99rem;
+    padding: .7rem;
 }
-.package-exchange-input button {
+.package-exchange-input .exbtn {
+    line-height: 2.5rem;
     flex-shrink: 0;
     font-size: .9rem;
     border: none;
     background-color: #0a80ff;
     color: #fff;
-    padding: 0 1.2rem;
+    padding: 0 1.4rem;
+}
+
+.product ul li .row {
+    display: flex;
+    justify-content: space-between;
+    font-size: .8rem;
+    align-items: flex-end;
+}
+.product ul li .row:first-child {
+    font-size: 1.05rem;
+    padding-bottom: .8rem;
+}
+.product ul li .row:first-child .col:last-child {
+    color: #0a80ff;
+    font-size: 1.4rem;
+}
+.product ul .hot .row:first-child .col:last-child{
+    color: #ff8400;
 }

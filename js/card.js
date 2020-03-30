@@ -3,11 +3,12 @@ $(function(){
     var token = getToken();
 	if(token.length<=0){
         // $('#con').html('请先&nbsp;&nbsp;<a href="login.html" style="font-size:12px;color:blue;text-decoration:underline">登录</a>')
-        $('#con').html('');
+        $('.package-exchange').html('');
 	} else {
-		$("#con .tocard").click(function () {
-            
-			var cardSerial = $("#cardSerial").val();
+		$(".package-exchange .exbtn").click(function (e) {
+			// var event1 = e||event;
+			// event1.preventDefault();
+			var cardSerial = $(".package-exchange-input>input").val();
 			if (cardSerial.length <= 0) {
 				showMessage("请填写卡密","error");
 				return false;
@@ -38,9 +39,10 @@ $(function(){
 				},
 				error: function (jqXHR, textStatus, errorThrown) {
 					showMessage('发生错误，HTTP代码是' + (jqXHR ? jqXHR.status : '未知'),"error");
-					$('#con').html('');
+					$('.package-exchange').html('');
 				},
 				complete: function () {//无论成功还是失败，都会调用此函数
+					$(".package-exchange-input>input").val('')
 				}
 			});
 		});
